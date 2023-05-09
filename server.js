@@ -31,6 +31,10 @@ app.use("/api/v1/students", students);
 
 const PORT = process.env.PORT || 5000;
 
+app.get("/", async(req,res)=>{
+  res.send({title:"Books"})
+})
+
 const server = app.listen(PORT, () =>
   console.log(`Server running at port: ${PORT}`)
 );
