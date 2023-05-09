@@ -31,7 +31,7 @@ app.use("/api/v1/students", students);
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/", async(req,res)=>{
+app.get("/posting", async(req,res)=>{
   res.send({title:"Books"})
 })
 
