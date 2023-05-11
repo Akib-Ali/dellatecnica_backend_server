@@ -19,6 +19,13 @@ const fs = require("fs");
 //   }
 // );
 // Get all Students
+
+cloudinary.config({
+  cloud_name:process.env.CLOUDINARY_NAME,
+  api_key:process.env.CLOUDINARY_API,
+  api_secret:process.env.CLOUDINARY_SECRET 
+})
+
 exports.getStudents = async (req, res, next) => {
   try {
     const students = await Student.find();
